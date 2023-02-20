@@ -14,9 +14,15 @@ namespace UnitTest
             bool Checkin = VIN_LIB.CheckVIN(vin);
             Assert.AreNotEqual(Checkin, true);
         }
-       
 
         [TestMethod] //2
+        public void CheckingForARegularExpression2()
+        {
+            string vin = "11A5513P123137478";
+            bool Checkin = VIN_LIB.CheckVIN(vin);
+            Assert.IsFalse(Checkin);
+        }
+        [TestMethod] //3
         public void CheckingForAnEmptyValue()
         {
             string vin = "JH4KA4540LC016127";
@@ -24,7 +30,7 @@ namespace UnitTest
         }
 
 
-        [TestMethod] //3
+        [TestMethod] //4
         public void CheckingForAnEmptyValue2()
         {
             string vin = null;
