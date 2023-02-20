@@ -43,7 +43,7 @@ namespace UnitTest
             bool Checkin = VIN_LIB.CheckVIN(vin);
             Assert.IsInstanceOfType(Checkin, typeof(bool));
         }
-        [TestMethod] //6
+        
         
     }
 }
